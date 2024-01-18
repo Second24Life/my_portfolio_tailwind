@@ -1,12 +1,6 @@
 // icons
 import {
-  RxCrop,
-  RxPencil2,
-  RxDesktop,
-  RxReader,
-  RxRocket,
-  RxArrowTopLeft,
-  RxArrowTopRight,
+  RxCrop, RxDesktop, RxArrowTopRight
 } from "react-icons/rx";
 
 // data
@@ -14,27 +8,12 @@ const serviceData = [
   {
     icon: <RxCrop />,
     title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    icon: <RxPencil2 />,
-    title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Брендинг - это процесс создания уникального образа компании.",
   },
   {
     icon: <RxDesktop />,
-    title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    icon: <RxReader />,
-    title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    icon: <RxRocket />,
-    title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Frontend Development",
+    description: "Frontend разработка - это создание пользовательского интерфейса.",
   },
 ];
 
@@ -69,12 +48,12 @@ const ServiceSlider = () => {
             <div className="text-4xl text-accent mb-4">{item.icon}</div>
             {/* title & desc */}
             <div className="mb-8">
-              <div className="mb-2 text-lg">{item.title}</div>
+              <div className="mb-2 text-lg h-[60px]">{item.title}</div>
               <p className="max-w-[350px] leading-normal">{item.description}</p>
             </div>
             {/* arrow */}
             <div className="text-3xl">
-              <RxArrowTopRight className="transition-all duration-300 group-hover:rotate-45 group-hover:text-accent"/>
+              <RxArrowTopRight className="transition-all duration-300 group-hover:rotate-45 group-hover:text-accent" />
             </div>
           </div>
         </SwiperSlide>

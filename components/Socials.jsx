@@ -1,34 +1,23 @@
 import Link from "next/link";
 
-import {
-  RiBehanceLine,
-  RiDribbbleLine,
-  RiFacebookBoxLine,
-  RiInstagramLine,
-  RiPinterestLine,
-  RiYoutubeLine,
-} from "react-icons/ri";
+import { RiTelegramFill } from "react-icons/ri";
+import { SiHabr } from "react-icons/si";
 
 const Socials = () => {
   return (
     <div className="flex items-center gap-x-5 text-lg">
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiYoutubeLine />
+      <div className="">Contact me:</div>
+      <Link
+        href={"https://t.me/second24life"}
+        target={"_blank"}
+        className="hover:text-accent transition-all duration-300">
+        <RiTelegramFill />
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiInstagramLine />
-      </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiFacebookBoxLine />
-      </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiDribbbleLine />
-      </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiBehanceLine />
-      </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiPinterestLine />
+      <Link
+        href={"https://freelance.habr.com/freelancers/Second24Life"}
+        target={"_blank"}
+        className="hover:text-accent transition-all duration-300">
+        <SiHabr />
       </Link>
     </div>
   );

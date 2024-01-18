@@ -21,8 +21,9 @@ const Home = () => {
             animate="show"
             exit="hidden"
             className="h1">
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-accent">Digital Reality</span>
+            От идеи
+            <br />
+            <span className="text-accent"> до Реализации</span>
           </motion.h1>
           {/* subtitle */}
           <motion.p
@@ -31,10 +32,9 @@ const Home = () => {
             animate="show"
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
-            pariatur libero maiores quis, ipsa perferendis illum rem a nostrum
-            cumque consectetur. Eaque blanditiis doloremque pariatur vero
-            provident nam quidem harum!
+            Я использую современные технологии и инструменты для разработки
+            эффективных и оптимизированных решений, которые отвечают требованиям
+            пользователей и бизнеса.
           </motion.p>
           {/* btn */}
           <div className="flex justify-center xl:hidden relative">
@@ -56,11 +56,13 @@ const Home = () => {
         <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
         {/* particles */}
         <ParticlesContainer />
-        <motion.div variants={fadeIn("up", 0.5)}
-            initial="hidden"
-            animate="show"
-            transition={{duration: 1, ease: 'easeInOut'}}
-            exit="hidden" className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]">
+        <motion.div
+          variants={fadeIn("up", 0.5)}
+          initial="hidden"
+          animate="show"
+          transition={{ duration: 1, ease: "easeInOut" }}
+          exit="hidden"
+          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]">
           <Avatar />
         </motion.div>
       </div>

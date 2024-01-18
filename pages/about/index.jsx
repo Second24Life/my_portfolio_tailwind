@@ -11,8 +11,13 @@ import {
 import {
   SiNextdotjs,
   SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
+  SiRedux,
+  SiGit,
+  SiTypescript,
+  SiDocker,
+  SiJira,
+  SiTrello,
+  SiThreedotjs,
 } from "react-icons/si";
 
 // components
@@ -24,73 +29,58 @@ import { fadeIn } from "../../variants";
 import CountUp from "react-countup";
 import { useState } from "react";
 
+const styleIcons =
+  "group-hover:ease-in-out transition duration-700 group-hover:duration-1000 cursor-pointer object-center object-cover group-hover:scale-110 sm:group-hover:scale-150  aspect-square rotate-0 group-hover:-rotate-[360deg] hover:fill-accent group-hover:-translate-y-6 group-hover:-skew-y-6 group-hover:skew-x-6";
+
 //  data
 const aboutData = [
   {
-    title: "skills",
+    title: "Умения",
     info: [
       {
-        title: "Web Development",
+        // title: "Web Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          <FaHtml5 className={styleIcons} />,
+          <FaCss3 className={styleIcons} />,
+          <FaJs className={styleIcons} />,
+          <SiTypescript className={styleIcons} />,
+          <FaReact className={styleIcons} />,
+          <SiNextdotjs className={styleIcons} />,
+          <SiFramer className={styleIcons} />,
+          <SiThreedotjs className={styleIcons} />,
+          <SiRedux className={styleIcons} />,
+
+          <SiGit className={styleIcons} />,
+          <SiDocker className={styleIcons} />,
+          <SiJira className={styleIcons} />,
+          <SiTrello className={styleIcons} />,
         ],
       },
+    ],
+  },
+  {
+    title: "Experience",
+    info: [
       {
-        title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        title: "Frontend developer - Antifreeze studio",
+        stage: "2023 - н.в.",
+      },
+      {
+        title: "Frontend developer - Freelance",
+        stage: "2020 - 2023",
+      },
+      {
+        title: "Веб-разработчик - Skyweb24",
+        stage: "2018 - 2019",
       },
     ],
   },
   {
-    title: "awards",
+    title: "Образование",
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-      },
-    ],
-  },
-  {
-    title: "experience",
-    info: [
-      {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
-      },
-      {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
-      },
-      {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
-      },
-    ],
-  },
-  {
-    title: "credentials",
-    info: [
-      {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
-      },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        title: "Программная инженерия - СФУ, Красноярск",
+        stage: "2019",
       },
     ],
   },
@@ -119,8 +109,7 @@ const About = () => {
             animate="show"
             exit="hidden"
             className="h2">
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Небольшая <span className="text-accent">история</span> работы.
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
@@ -128,9 +117,10 @@ const About = () => {
             animate="show"
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
-            10 years ago, I began freelancing as a developer. Since then, I've
-            done remote work for agencies, counsulted for startuos, and,
-            collaborated on digital products for business and consumer use.
+            6 лет назад я выбрал путь frontend разработчика. С тех пор, я
+            тружусь удаленно, сотрудничая с различными агентствами, оказывая
+            консультации стартапам и работая над цифровыми продуктами для
+            бизнеса и потребительского рынка.
           </motion.p>
           {/* counters */}
           <motion.div
@@ -143,37 +133,28 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} /> +
+                  <CountUp start={0} end={6} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Years of experience
+                  Лет опыта
                 </div>
               </div>
               {/* clients */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} /> +
+                  <CountUp start={0} end={100} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Satisfied clients
+                  Довольных клиентов
                 </div>
               </div>
               {/* projects */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} /> +
+                  <CountUp start={0} end={200} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Finished projects
-                </div>
-              </div>
-              {/* awards */}
-              <div className="relative flex-1">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={8} duration={5} /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Winning awards
+                  Законченных проектов
                 </div>
               </div>
             </div>
@@ -184,7 +165,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
+          className="flex flex-col w-full xl:max-w-[48%] h-[200px]">
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => (
               <div
@@ -205,13 +186,21 @@ const About = () => {
                 key={itemIndex}
                 className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60">
                 {/* title */}
-                <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                <div className="hidden md:flex">-</div>
+                {item.title !== undefined && (
+                  <>
+                    <div className="font-light mb-2 md:mb-0">{item.title}</div>
+                    <div className="hidden md:flex">-</div>
+                  </>
+                )}
+
                 <div>{item.stage}</div>
-                <div className="flex gap-x-4">
+                <div
+                  className={`flex gap-4 flex-wrap ${
+                    item.icons ? "xl:w-[90%]" : ""
+                  }`}>
                   {/* icons */}
                   {item.icons?.map((icon, itemIndex) => (
-                    <div className="text-2xl">{icon}</div>
+                    <div className="text-2xl group">{icon}</div>
                   ))}
                 </div>
               </div>

@@ -1,7 +1,7 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
-
-// components
 import Socials from "../components/Socials";
+import { fadeIn } from "../variants";
 
 const Header = () => {
   return (
@@ -10,9 +10,14 @@ const Header = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-y-2 md:gap-y-4 py-8">
           {/* logo */}
           <Link href={"/"}>
-            <h2 className="text-xl md:text-5xl font-bold cursor-pointer">
+            <motion.h2
+              variants={fadeIn("right", 0.2)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="text-xl md:text-5xl font-bold cursor-pointer">
               Maxim Zarubitskiy
-            </h2>
+            </motion.h2>
           </Link>
           {/* socials */}
           <Socials />

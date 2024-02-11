@@ -7,9 +7,9 @@ import { fadeIn } from "../../variants";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full">
+    <div className="bg-primary/60 h-full overflow-">
       {/* text */}
-      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
+      <div className="w-full h-full bg-gradient-to-b from-primary/60 via-black/50 to-black/10">
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           {/* title */}
           <motion.h1
@@ -59,7 +59,7 @@ const Home = () => {
           animate="show"
           transition={{ duration: 1, ease: "easeInOut" }}
           exit="hidden"
-          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]">
+          className="w-full h-full max-w-[737px] max-h-[678px] absolute bottom-14 lg:right-[8%]">
           <Avatar />
         </motion.div>
       </div>

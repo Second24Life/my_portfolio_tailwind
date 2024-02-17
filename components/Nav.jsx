@@ -3,9 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   HiHome,
-  HiUser,
-  HiViewColumns,
-  HiRectangleGroup,
+  HiUser, HiRectangleGroup
 } from "react-icons/hi2";
 
 // nav data

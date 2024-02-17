@@ -1,91 +1,8 @@
+import { experience, skills } from "@/static/index";
 import { motion, useScroll, useTransform } from "framer-motion";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import CountUp from "react-countup";
-import { FaCss3, FaHtml5, FaJs, FaReact } from "react-icons/fa";
-import {
-  SiDocker,
-  SiFramer,
-  SiGit,
-  SiJira,
-  SiNextdotjs,
-  SiRedux,
-  SiThreedotjs,
-  SiTrello,
-  SiTypescript,
-} from "react-icons/si";
-
-const styleIcons =
-  "group-hover:ease-in-out transition duration-700 group-hover:duration-1000 cursor-pointer object-center object-cover group-hover:scale-110 sm:group-hover:scale-150  aspect-square rotate-0 group-hover:-rotate-[360deg] hover:fill-accent group-hover:-translate-y-6 group-hover:-skew-y-6 group-hover:skew-x-6";
-
-const skills = [
-  {
-    title: "HTML",
-    icon: <FaHtml5 className={styleIcons} />,
-  },
-  {
-    title: "CSS",
-    icon: <FaCss3 className={styleIcons} />,
-  },
-  {
-    title: "JS",
-    icon: <FaJs className={styleIcons} />,
-  },
-  {
-    title: "React",
-    icon: <FaReact className={styleIcons} />,
-  },
-  {
-    title: "Next.js",
-    icon: <SiNextdotjs className={styleIcons} />,
-  },
-  {
-    title: "Framer",
-    icon: <SiFramer className={styleIcons} />,
-  },
-  {
-    title: "Redux",
-    icon: <SiRedux className={styleIcons} />,
-  },
-  {
-    title: "Git",
-    icon: <SiGit className={styleIcons} />,
-  },
-  {
-    title: "Docker",
-    icon: <SiDocker className={styleIcons} />,
-  },
-  {
-    title: "Jira",
-    icon: <SiJira className={styleIcons} />,
-  },
-  {
-    title: "Trello",
-    icon: <SiTrello className={styleIcons} />,
-  },
-  {
-    title: "Three.js",
-    icon: <SiThreedotjs className={styleIcons} />,
-  },
-  {
-    title: "TypeScript",
-    icon: <SiTypescript className={styleIcons} />,
-  },
-];
-
-const experience = [
-  {
-    title: "Веб-разработчик - Skyweb24",
-    stage: "2018 - 2019",
-  },
-  {
-    title: "Frontend developer - Freelance",
-    stage: "2020 - 2023",
-  },
-  {
-    title: "Frontend developer - Antifreeze studio",
-    stage: "2023 - н.в.",
-  },
-];
+import { BsArrowDown } from "react-icons/bs";
 
 const ZoomParallax = () => {
   const container = useRef(null);
@@ -100,12 +17,20 @@ const ZoomParallax = () => {
   const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
   const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
   const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
+  const scale200 = useTransform(scrollYProgress, [0, 1], [200, 0]);
+  const opacity = useTransform(scrollYProgress, [0.8, 1], [0, 1]);
 
   const elements = [
     {
       child: (
-        <div className="w-full h-full  flex items-center justify-center">
-          <h2>My works</h2>
+        <div className="w-full h-full relative flex flex-col items-center justify-center text-center">
+          <motion.div
+            style={{ opacity: scrollYProgress, borderRadius: scale200 }}
+            className={`absolute top-0 left-0 bg-black w-full h-full`}></motion.div>
+          <h2 className="animate-pulse text-4xl">My works</h2>
+          <motion.div style={{ opacity: opacity }} className="relative top-10">
+            <BsArrowDown className="text-xl animate-bounce" />
+          </motion.div>
         </div>
       ),
       scale: scale4,
@@ -188,7 +113,9 @@ const ZoomParallax = () => {
                 key={index}
                 style={{ scale }}
                 className="w-full h-full top-0 absolute flex items-center justify-center elementImage">
-                <div className="relative w-[25vw] h-[25vh]">{child}</div>
+                <div className="relative w-[25vw] h-[25vw] overflow-hidden">
+                  {child}
+                </div>
               </motion.div>
             );
           })}

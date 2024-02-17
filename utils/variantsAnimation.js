@@ -24,3 +24,28 @@ export const fadeIn = (direction, delay) => {
     },
   };
 };
+
+export const fadeZoom = (delay) => {
+  return {
+    hidden: {
+      opacity: 0,
+      scale: 0.5,
+      transition: {
+        type: 'tween',
+        duration: 1.5,
+        delay: delay,
+        ease: [0.25, 0.6, 0.3, 0.8],
+      },
+    },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: 'tween',
+        duration: 1.4,
+        delay: delay,
+        ease: [0.25, 0.25, 0.25, 0.75],
+      },
+    },
+  };
+};

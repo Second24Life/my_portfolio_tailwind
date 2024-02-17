@@ -2,7 +2,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { RiTelegramFill } from "react-icons/ri";
 import { SiHabr } from "react-icons/si";
-import { fadeIn } from "../variants";
+import { fadeIn } from "@/utils/variantsAnimation";
 
 const Socials = () => {
   return (

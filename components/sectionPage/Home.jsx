@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import Avatar from "../Avatar";
-import ParticlesContainer from "../ParticlesContainer";
-import ProjectsBtn from "../ProjectsBtn";
+import Avatar from "@/components/Avatar";
+import ParticlesContainer from "@/components/ParticlesContainer";
+import ProjectsBtn from "@/components/ProjectsBtn";
 
-import { fadeIn } from "../../variants";
+import { fadeIn } from "@/utils/variantsAnimation";
 
 const Home = () => {
   return (

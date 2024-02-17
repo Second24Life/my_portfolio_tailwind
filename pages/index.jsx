@@ -1,6 +1,7 @@
+import Home from "@/components/sectionPage/Home";
+import MyWorks from "@/components/sectionPage/MyWorks";
+import ZoomParallax from "@/components/sectionPage/ZoomParallax";
 import Lenis from "@studio-freight/lenis";
-import Home from "../components/page/Home";
-import ZoomParallax from "../components/page/ZoomParallax";
 import { useEffect } from "react";
 
 const HomePage = () => {
@@ -19,6 +20,7 @@ const HomePage = () => {
     <>
       <Home />
       <ZoomParallax />
+      <MyWorks />
     </>
   );
 };

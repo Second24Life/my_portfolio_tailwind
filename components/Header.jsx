@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Socials from "../components/Socials";
-import { fadeIn } from "../variants";
+import Socials from "@/components/Socials";
+import { fadeIn } from "@/utils/variantsAnimation";
 
 const Header = () => {
   return (

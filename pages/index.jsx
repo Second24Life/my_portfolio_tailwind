@@ -1,3 +1,4 @@
+import Finish from "@/components/sectionPage/Finish";
 import Home from "@/components/sectionPage/Home";
 import MyWorks from "@/components/sectionPage/MyWorks";
 import ZoomParallax from "@/components/sectionPage/ZoomParallax";
@@ -21,6 +22,7 @@ const HomePage = () => {
       <Home />
       <ZoomParallax />
       <MyWorks />
+      <Finish />
     </>
   );
 };

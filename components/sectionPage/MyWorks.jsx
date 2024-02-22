@@ -1,28 +1,19 @@
-import { motion } from "framer-motion";
-import { fadeZoom } from "@/utils/variantsAnimation";
 import React from "react";
+import Work from "../Work";
+import { projectImages } from "@/static/index";
 
 const MyWorks = () => {
-  return (
-    <div className="w-full h-[200vh] relative flex flex-col items-center justify-center text-center bg-black">
-      <motion.div
-        variants={fadeZoom}
-        initial="hidden"
-        animate="visible"
-        className="w-full h-full relative flex items-center justify-center text-center"
-      >
-        <h1 className="text-4xl font-bold">Key to ai</h1>
-      </motion.div>
-      <motion.div
-        variants={fadeZoom}
-        initial="hidden"
-        animate="visible"
-        className="w-full h-full relative flex items-center justify-center text-center"
-      >
-        <h1 className="text-4xl font-bold">Short links</h1>
-      </motion.div>
-    </div>
-  );
+  const workVariants = projectImages.map((project, index) => {
+    return (
+      <div
+        key={index}
+        className="w-full relative flex flex-col items-center justify-center text-center bg-black">
+        <Work title={project.title} images={project.images} link={project.link} />
+      </div>
+    );
+  });
+
+  return workVariants;
 };
 
 export default MyWorks;

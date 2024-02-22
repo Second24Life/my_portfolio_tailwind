@@ -12,13 +12,13 @@ const ZoomParallax = () => {
     offset: ["start start", "end end"],
   });
 
-  const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
   const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
   const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
+  const scale7 = useTransform(scrollYProgress, [0, 1], [1, 7]);
   const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
   const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
   const scale200 = useTransform(scrollYProgress, [0, 1], [200, 0]);
-  const opacity = useTransform(scrollYProgress, [0.8, 1], [0, 1]);
+  const opacity = useTransform(scrollYProgress, [0.6, 1], [0, 1]);
 
   const elements = [
     {
@@ -27,13 +27,13 @@ const ZoomParallax = () => {
           <motion.div
             style={{ opacity: scrollYProgress, borderRadius: scale200 }}
             className={`absolute top-0 left-0 bg-black w-full h-full`}></motion.div>
-          <h2 className="animate-pulse text-4xl">My works</h2>
+          <h2 className="animate-pulse text-4xl">Мои работы</h2>
           <motion.div style={{ opacity: opacity }} className="relative top-10">
             <BsArrowDown className="text-xl animate-bounce" />
           </motion.div>
         </div>
       ),
-      scale: scale4,
+      scale: scale7,
     },
     {
       child: (

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Avatar from "@/components/Avatar";
 import ParticlesContainer from "@/components/ParticlesContainer";
-import ProjectsBtn from "@/components/ProjectsBtn";
 
 import { fadeIn } from "@/utils/variantsAnimation";
 
@@ -33,18 +32,6 @@ const Home = () => {
             эффективных и оптимизированных решений, которые отвечают требованиям
             пользователей и бизнеса.
           </motion.p>
-          {/* btn */}
-          <div className="flex justify-center xl:hidden relative">
-            <ProjectsBtn />
-          </div>
-          <motion.div
-            variants={fadeIn("down", 0.4)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="hidden xl:flex">
-            <ProjectsBtn />
-          </motion.div>
         </div>
       </div>
       {/* image */}
@@ -52,7 +39,7 @@ const Home = () => {
         {/* bg img */}
         <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
         {/* particles */}
-        {/* <ParticlesContainer /> */}
+        <ParticlesContainer />
         <motion.div
           variants={fadeIn("up", 0.5)}
           initial="hidden"

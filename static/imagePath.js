@@ -8,9 +8,6 @@
 //   "keytoai7.png",
 //   "keytoai8.png",
 //   "keytoai9.png",
-//   // "keytoai10.png",
-//   // "keytoai11.png",
-//   // "keytoai12.png",
 // ]
 
 export const edleedImage = [
@@ -23,25 +20,7 @@ export const edleedImage = [
   "/edleed/edleed7.png",
   "/edleed/edleed8.png",
   "/edleed/edleed9.png",
-  // "edlee10.png",
-  // "edlee11.png",
-  // "edlee12.png",
 ]
-
-// export const ShortLinksImage = [
-//   "shortlinks1.png",
-//   "shortlinks2.png",
-//   "shortlinks3.png",
-//   "shortlinks4.png",
-//   "shortlinks5.png",
-//   "shortlinks6.png",
-//   "shortlinks7.png",
-//   "shortlinks8.png",
-//   "shortlinks9.png",
-//   // "shortlinks10.png",
-//   // "shortlinks11.png",
-//   // "shortlinks12.png",
-// ]
 
 export const oxweImage = [
   '/oxwe/oxwe1.png',
@@ -53,22 +32,18 @@ export const oxweImage = [
   '/oxwe/oxwe7.png',
   '/oxwe/oxwe8.png',
   '/oxwe/oxwe9.png',
-  // "oxwe10.png",
-  // "oxwe11.png",
-  // "oxwe12.png",
 ]
 
-export const argusImage = [
-  "/argus/argus1.png",
-  "/argus/argus2.png",
-  "/argus/argus3.png",
-  "/argus/argus4.png",
-  "/argus/argus5.png",
-  "/argus/argus6.png",
-  "/argus/argus7.png",
-  "/argus/argus8.png",
-  "/argus/argus9.png",
-  // "argus10.png",
-  // "argus11.png",
-  // "argus12.png",
+export const otherWorkImages = [
+  "/otherWork/argus1.png",
+  "/otherWork/argus2.png",
+  "/otherWork/ksip1.png",
+  "/otherWork/ksip2.png",
+  "/otherWork/monmart1.png",
+  "/otherWork/monmart2.png",
+  "/otherWork/roulete1.png",
+  "/otherWork/surus1.png",
+  "/otherWork/tsmarket1.png",
+  "/otherWork/tsmarket2.png",
+  "/otherWork/zilada1.png",
 ]

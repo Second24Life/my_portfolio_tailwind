@@ -10,7 +10,7 @@ import {
   SiTrello,
   SiTypescript,
 } from "react-icons/si";
-import { argusImage, edleedImage, oxweImage } from "./imagePath";
+import { argusImage, edleedImage, otherWorkImages, oxweImage } from "./imagePath";
 
 export * from "./imagePath";
 
@@ -99,17 +99,47 @@ export const projectImages = [
     link: "https://oxwe.ru/",
   },
   {
-    title: "Argus",
-    images: argusImage,
-    link: "https://argus-company.ru/",
-  },
-  {
     title: "Различные проекты",
-    images: argusImage,
+    images: otherWorkImages,
     link: ''
   }
-  // {
-  //   title: "ShortLinks",
-  //   images: ShortLinksImage,
-  // },
 ];
+
+export const projectLinks = [
+  {
+    nameImage: "edlee",
+    link: "https://edleed.com/",
+  },
+  {
+    nameImage: "oxwe",
+    link: "https://oxwe.ru/",
+  },
+  {
+    nameImage: "argus",
+    link: 'https://argus-company.ru/'
+  },
+  {
+    nameImage: "ksip",
+    link: 'https://ksip.ru/'
+  },
+  {
+    nameImage: "monmart",
+    link: 'https://monmart.su/'
+  },
+  {
+    nameImage: "roulete",
+    link: 'https://gamebitcoin.vercel.app/european-roulette'
+  },
+  {
+    nameImage: "surus",
+    link: 'http://surus-shop.ru/'
+  },
+  {
+    nameImage: "tsmarket",
+    link: 'https://tsmarket.ru/'
+  },
+  {
+    nameImage: "zilada",
+    link: 'https://zilada.ru/'
+  },
+]

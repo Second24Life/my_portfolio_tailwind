@@ -10,7 +10,6 @@ const sora = Sora({
 
 // components
 import TopLeftImg from "@/components/TopLeftImg";
-import Nav from "@/components/Nav";
 import Header from "@/components/Header";
 
 const Layout = ({ children }) => {
@@ -18,7 +17,6 @@ const Layout = ({ children }) => {
     <div
       className={`h-screen w-screen bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
       <TopLeftImg />
-      <Nav />
       <Header />
       {children}
     </div>

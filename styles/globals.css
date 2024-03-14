@@ -60,13 +60,13 @@
 .elementImage:nth-of-type(3) > div {
   top: -10vh;
   left: -25vw;
-  width: 20vw;
+  width: 15vw;
   height: 45vh;
 }
 
 .elementImage:nth-of-type(4) > div {
   left: 27.5vw;
-  width: 40vw;
+  width: 35vw;
   height: 25vh;
 }
 
@@ -89,6 +89,50 @@
   left: 25vw;
   width: 40vw;
   height: 15vh;
+}
+
+@media (max-width: 768px) {
+  .elementImage:nth-of-type(2) > div {
+    top: -40vh;
+    left: 15vw;
+    width: 35vw;
+    height: 30vh;
+  }
+
+  .elementImage:nth-of-type(3) > div {
+    top: -20vh;
+    left: -35vw;
+    width: 15vw;
+    height: 45vh;
+  }
+
+  .elementImage:nth-of-type(4) > div {
+    left: 40vw;
+    top: -10vh;
+    width: 35vw;
+    height: 25vh;
+  }
+
+  .elementImage:nth-of-type(5) > div {
+    top: 27.5vh;
+    left: 5vw;
+    width: 20vw;
+    height: 25vh;
+  }
+
+  .elementImage:nth-of-type(6) > div {
+    top: 30vh;
+    left: -15vw;
+    width: 50vw;
+    height: 25vh;
+  }
+
+  .elementImage:nth-of-type(7) > div {
+    top: 20vh;
+    left: 30vw;
+    width: 40vw;
+    height: 30vh;
+  }
 }
 
 .paralaxColumn:nth-of-type(1) {

@@ -27,7 +27,7 @@ const ZoomParallax = () => {
           <motion.div
             style={{ opacity: scrollYProgress, borderRadius: scale200 }}
             className={`absolute top-0 left-0 bg-black w-full h-full`}></motion.div>
-          <h2 className="animate-pulse text-4xl">Мои работы</h2>
+          <h2 className="animate-pulse text-xs sm:text-xl md:text-4xl">Мои работы</h2>
           <motion.div style={{ opacity: opacity }} className="relative top-10">
             <BsArrowDown className="text-xl animate-bounce" />
           </motion.div>
@@ -37,16 +37,17 @@ const ZoomParallax = () => {
     },
     {
       child: (
-        <div className="h-full flex items-center justify-center text-2xl xl:text-4xl font-extrabold text-accent">
-          6+ лет опыта
+        <div className="w-full h-full flex items-center justify-center px-2 text-xs lg:text-base">
+          6 лет назад я выбрал путь frontend разработчика. С тех пор, я тружусь
+          удаленно. Работаю над цифровыми продуктами для бизнеса и
+          потребительского рынка.
         </div>
       ),
-      scale: scale5,
+      scale: scale8,
     },
-
     {
       child: (
-        <div className="w-full h-full flex flex-wrap gap-2 content-center items-center justify-center">
+        <div className="w-full h-full flex flex-wrap gap-5 content-center items-center justify-center">
           {skills.map((item, index) => (
             <div key={index} alt={item.title}>
               <div className={`flex gap-4 flex-wrap xl:w-[90%]`}>
@@ -60,16 +61,8 @@ const ZoomParallax = () => {
     },
     {
       child: (
-        <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center justify-center">
-          {experience.map((item, index) => (
-            <div
-              key={index}
-              className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center ">
-              <div className="font-light mb-2 md:mb-0">{item.title}</div>
-              <div className="hidden md:flex">-</div>
-              <div>{item.stage}</div>
-            </div>
-          ))}
+        <div className="h-full flex items-center justify-center text-2xl xl:text-4xl font-extrabold text-accent">
+          6+ лет опыта
         </div>
       ),
       scale: scale5,
@@ -93,13 +86,19 @@ const ZoomParallax = () => {
     },
     {
       child: (
-        <div className="w-full h-full flex items-center justify-center px-2">
-          6 лет назад я выбрал путь frontend разработчика. С тех пор, я тружусь
-          удаленно. Работаю над цифровыми продуктами для бизнеса и
-          потребительского рынка.
+        <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center justify-center">
+          {experience.map((item, index) => (
+            <div
+              key={index}
+              className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-xs lg:text-base">
+              <div className="font-light mb-2 md:mb-0">{item.title}</div>
+              <div className="hidden md:flex">-</div>
+              <div>{item.stage}</div>
+            </div>
+          ))}
         </div>
       ),
-      scale: scale8,
+      scale: scale5,
     },
   ];
 
@@ -113,7 +112,7 @@ const ZoomParallax = () => {
                 key={index}
                 style={{ scale }}
                 className="w-full h-full top-0 absolute flex items-center justify-center elementImage">
-                <div className="relative w-[25vw] h-[25vw] overflow-hidden">
+                <div className="relative w-[40vw] h-[40vh] md:w-[25vw] md:h-[25vw] overflow-hidden">
                   {child}
                 </div>
               </motion.div>

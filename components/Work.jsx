@@ -35,26 +35,73 @@ function Work({ title, images, link }) {
 
   return (
     <section className="bg-black">
-      <a href={link} target="_blank" referrerPolicy="no-referrer">
-        <div className="h-[50vh] w-screen flex justify-center items-center text-6xl uppercase">
-          {title}
-        </div>
-
-        <div className="h-[175vh] w-screen overflow-hidden">
-          <div
-            ref={gallery}
-            className="relative -top-[12.5vh] h-[200vh] flex gap-[2vw] p-[2vw]">
-            <Column images={[images[0], images[1], images[2]]} y={y} />
-            <Column images={[images[2], images[3], images[5]]} y={y2} />
-            <Column images={[images[4], images[5], images[8]]} y={y3} />
-            <Column images={[images[6], images[7], images[0]]} y={y4} />
+      {link === "" ? (
+        <>
+          <div className="h-[50vh] w-screen flex justify-center items-center text-6xl uppercase">
+            {title}
           </div>
-        </div>
 
-        {/* <div className="h-[50vh] w-screen flex justify-center items-center text-6xl">
-        OXWE
-      </div> */}
-      </a>
+          <div className="h-[175vh] w-screen overflow-hidden">
+            <div
+              ref={gallery}
+              className="relative -top-[12.5vh] h-[200vh] flex gap-[2vw] p-[2vw]">
+              <Column
+                images={[images[0], images[1], images[2]]}
+                y={y}
+                needLink={link === ""}
+              />
+              <Column
+                images={[images[2], images[3], images[5]]}
+                y={y2}
+                needLink={link === ""}
+              />
+              <Column
+                images={[images[4], images[5], images[8]]}
+                y={y3}
+                needLink={link === ""}
+              />
+              <Column
+                images={[images[6], images[7], images[0]]}
+                y={y4}
+                needLink={link === ""}
+              />
+            </div>
+          </div>
+        </>
+      ) : (
+        <a href={link} target="_blank" referrerPolicy="no-referrer">
+          <div className="h-[50vh] w-screen flex justify-center items-center text-6xl uppercase">
+            {title}
+          </div>
+
+          <div className="h-[175vh] w-screen overflow-hidden">
+            <div
+              ref={gallery}
+              className="relative -top-[12.5vh] h-[200vh] flex gap-[2vw] p-[2vw]">
+              <Column
+                images={[images[0], images[1], images[2]]}
+                y={y}
+                needLink={link === ""}
+              />
+              <Column
+                images={[images[2], images[3], images[5]]}
+                y={y2}
+                needLink={link === ""}
+              />
+              <Column
+                images={[images[4], images[5], images[8]]}
+                y={y3}
+                needLink={link === ""}
+              />
+              <Column
+                images={[images[6], images[7], images[0]]}
+                y={y4}
+                needLink={link === ""}
+              />
+            </div>
+          </div>
+        </a>
+      )}
     </section>
   );
 }

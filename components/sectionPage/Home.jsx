@@ -3,10 +3,11 @@ import Avatar from "@/components/Avatar";
 import ParticlesContainer from "@/components/ParticlesContainer";
 
 import { fadeIn } from "@/utils/variantsAnimation";
+import { BsArrowDown } from "react-icons/bs";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full overflow-">
+    <div className="bg-primary/60 h-full relative">
       {/* text */}
       <div className="w-full h-full bg-gradient-to-b from-primary/60 via-black/50 to-black/10">
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
@@ -50,8 +51,18 @@ const Home = () => {
           <Avatar />
         </motion.div>
       </div>
-    </div>
-  )
-}
 
-export default Home
+      <motion.div
+        variants={fadeIn("up", 0.7)}
+        initial="hidden"
+        animate="show"
+        transition={{ duration: 1, ease: "easeInOut" }}
+        exit="hidden"
+        className="absolute bottom-5 left-1/2">
+        <BsArrowDown className="text-3xl animate-bounce opacity-20" />
+      </motion.div>
+    </div>
+  );
+};
+
+export default Home;

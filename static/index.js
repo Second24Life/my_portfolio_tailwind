@@ -79,11 +79,11 @@ export const experience = [
   },
   {
     title: "Frontend developer - Freelance",
-    stage: "2020 - 2023",
+    stage: "2020 - 2022",
   },
   {
     title: "Frontend developer - Antifreeze studio",
-    stage: "2023 - н.в.",
+    stage: "2022 - н.в.",
   },
 ];
 

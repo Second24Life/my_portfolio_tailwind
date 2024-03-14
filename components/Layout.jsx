@@ -12,7 +12,6 @@ const sora = Sora({
 import TopLeftImg from "@/components/TopLeftImg";
 import Header from "@/components/Header";
 import ScrollTopArrow from "@/components/ScrollTopArrow";
-import ScrollDown from "./ScrollDown";
 
 const Layout = ({ children }) => {
   return (
@@ -20,7 +19,6 @@ const Layout = ({ children }) => {
       className={`h-screen w-screen bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
       <TopLeftImg />
       <ScrollTopArrow />
-      
       <Header />
       {children}
     </div>
